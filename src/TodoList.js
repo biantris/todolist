@@ -17,7 +17,7 @@ class TodoList extends Component {
     }
 
     deleteItem(key) {
-        var filteredItems = this.state.items.filter (function (item) {
+        const filteredItems = this.state.items.filter (function (item) {
             return (item.key !== key);
         });
 
@@ -28,7 +28,7 @@ class TodoList extends Component {
 
     addItem(e) {
         if (this._inputElement.value !== "") {
-            var newItem = {
+            const newItem = {
                 text: this._inputElement.value,
                 key: Date.now()
             };
