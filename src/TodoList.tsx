@@ -1,70 +1,49 @@
-import React, { Component } from "react";
-import TodoItems from "./TodoItems";
-import "./TodoList.css";
+import React, { useState } from 'react';
+import { TextField, IconButton } from '@material-ui/core';
+import AddIcon from '@material-ui/icons/Add';
+import DeleteIcon from '@material-ui/icons/Delete';
 
-class TodoList extends Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            items: []
-        };
-
-        this.addItem = this.addItem.bind(this);
-        this.deleteItem = this.deleteItem.bind(this);
-        
-    }
-
-    deleteItem(key) {
-        const filteredItems = this.state.items.filter (function (item) {
-            return (item.key !== key);
-        });
-
-        this.setState ({
-           items: filteredItems 
-        });
-    }
-
-    addItem(e) {
-        if (this._inputElement.value !== "") {
-            const newItem = {
-                text: this._inputElement.value,
-                key: Date.now()
-            };
-
-            this.setState((prevState) => {
-                return {
-                    items: prevState.items.concat(newItem)
-                };
-            });
-
-            this._inputElement.value = "";
-        }
-
-        console.log(this.state.items);
-
-        e.preventDefault();
-    }
-
-
-    render() {
-        return (
-        <div className="todoListMain">
-            <div className="header">
-                <form onSubmit={this.addItem}>
-                    <input ref={(a) =>this._inputElement = a }
-                        placeholder="enter task">
-                    </input>
-                    <button type="submit">add</button>
-                </form>
-            </div>
-            <TodoItems entries={this.state.items}
-                                delete= {this.deleteItem} />
-        </div>
-        );
-    }
+interface TodoItem {
+    id: number
+    value: string
 }
 
+let count = 1
 
-export default TodoList;
+export const TodoList: React.FC = () => {
+    const [list, setList] = useState<TodoItem[]>([{ id: 0, value: '' }])
+
+    const handleChange = (value: string, id: TodoItem['id']) => {
+        setList(prev => prev.map(item => item.id === id ? { ...item, value } : item ))
+    }
+
+    const handleDelete = (id: TodoItem['id']) => {
+        setList(prev => prev.filter(item => item.id !== id))
+    }
+
+    const handleAdd = (index: number) => {
+        const newItem = { id: count ++, value: '' }
+        setList(prev => [...prev.slice(0, index + 1), newItem, ...prev.slice(index + 1)])
+    }
+
+    return (
+        <div>
+          {list.map((item, index) => (
+            <div key={item.id}>
+              <TextField
+                value={item.value}
+                onChange={e => handleChange(e.currentTarget.value, item.id)}
+              />
+              <IconButton onClick={() => handleAdd(index)}>
+                <AddIcon />
+              </IconButton>
+              {list.length > 1 && (
+                <IconButton onClick={() => handleDelete(item.id)}>
+                  <DeleteIcon />
+                </IconButton>
+              )}
+            </div>
+          ))}
+        </div>
+      )
+    }
