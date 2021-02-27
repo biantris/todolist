@@ -37,6 +37,7 @@ export const TodoList: React.FC = () => {
               <IconButton onClick={() => handleAdd(index)}>
                 <AddIcon />
               </IconButton>
+              
               {list.length > 1 && (
                 <IconButton onClick={() => handleDelete(item.id)}>
                   <DeleteIcon />
