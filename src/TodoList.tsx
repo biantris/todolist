@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { TextField, IconButton } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import DeleteIcon from '@material-ui/icons/Delete';
-
 interface TodoItem {
     id: number
     value: string
