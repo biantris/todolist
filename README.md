@@ -7,6 +7,9 @@ Well, the project that will be presented is very simple, but served to consolida
 - React Hooks
 - Material UI
 
+## Dev.to article with step by step
+https://dev.to/beatrizoliveira/my-first-project-with-react-ts-hooks-3mji
+
 ## Getting Started
 **1-** Clone repository.
 
