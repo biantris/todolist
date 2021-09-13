@@ -28,3 +28,6 @@ yarn start
 
 ### Demo
 https://todolist-git-master-beatrizoliveira250.vercel.app/
+
+### CodeSanbox
+https://codesandbox.io/s/react-to-print-f5tje?file=/src/App.tsx
