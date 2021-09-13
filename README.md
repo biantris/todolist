@@ -10,6 +10,7 @@ Well, the project that will be presented is very simple, but served to consolida
 - Material UI
 
 ### Dev.to article with step by step
+🔗 https://dev.to/beatrizoliveira/my-first-project-with-react-ts-hooks-3mji
 
 ### New Feature react-to-print
 ![image](https://user-images.githubusercontent.com/65451957/133009303-393635bd-0c71-4de1-ac50-51ce0d53f75e.png)
@@ -27,7 +28,7 @@ yarn start
 ```
 
 ### Demo
-https://todolist-git-master-beatrizoliveira250.vercel.app/
+🔗 https://todolist-git-master-beatrizoliveira250.vercel.app/
 
 ### CodeSanbox
-https://codesandbox.io/s/react-to-print-f5tje?file=/src/App.tsx
+🔗 https://codesandbox.io/s/react-to-print-f5tje?file=/src/App.tsx
