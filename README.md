@@ -12,6 +12,9 @@ Well, the project that will be presented is very simple, but served to consolida
 ### Dev.to article with step by step
 🔗 https://dev.to/beatrizoliveira/my-first-project-with-react-ts-hooks-3mji
 
+### Dev.to article adding new feat print button 
+🔗 [ WIP ]
+
 ### New Feature react-to-print
 ![image](https://user-images.githubusercontent.com/65451957/133009303-393635bd-0c71-4de1-ac50-51ce0d53f75e.png)
 
