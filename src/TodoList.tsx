@@ -16,7 +16,7 @@ interface TodoItem {
 let count = 1;
 
 export const TodoList = (props: Props) => {
-  const [list, setList] = useState<TodoItem[]>([{ id: 0, value: "" }]);
+  const [list, setList] = useState<TodoItem[]>([]);
 
   const { componentToPrint } = props;
 
