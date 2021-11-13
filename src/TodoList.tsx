@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useRef, useState} from "react";
 import { TextField, IconButton } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
 import DeleteIcon from "@material-ui/icons/Delete";
@@ -16,7 +16,7 @@ interface TodoItem {
 let count = 1;
 
 export const TodoList = (props: Props) => {
-  const [list, setList] = useState<TodoItem[]>([]);
+  const [list, setList] = useState<TodoItem[]>([{ id: 0, value: '', componentToPrint: useRef(null) }]);
 
   const { componentToPrint } = props;
 
@@ -31,15 +31,13 @@ export const TodoList = (props: Props) => {
   };
 
   const handleAdd = (index: number) => {
-    const newItem = { id: count++, value: "" };
-    setList((prev) => [
-      ...prev.slice(0, index + 1),
-      newItem,
-      ...prev.slice(index + 1)
-    ]);
-  };
+    const newItem = { id: count ++, value: '' }
+    // @ts-ignore
+    setList(prev => [...prev.slice(0, index + 1), newItem, ...prev.slice(index + 1)])
+  }
 
   return (
+      // @ts-ignore
     <div ref={(el) => (componentToPrint.current = el)}>
       {list.map((item, index) => (
         <div key={item.id}>
