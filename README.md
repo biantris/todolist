@@ -35,3 +35,6 @@ yarn start
 
 ### CodeSanbox
 🔗 https://codesandbox.io/s/react-to-print-f5tje?file=/src/App.tsx
+
+## Contributions
+Feel free to contribute to this project, if you find any bugs or improvements, open an issue and send a PR about it \o/
