@@ -31,7 +31,7 @@ yarn start
 ```
 
 ### Demo
-🔗 https://todolist-one-psi.vercel.app
+🔗 https://todolist-brown-rho.vercel.app/
 
 ### CodeSanbox
 🔗 https://codesandbox.io/s/react-to-print-f5tje?file=/src/App.tsx
