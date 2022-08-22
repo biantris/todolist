@@ -22,12 +22,12 @@ Well, the project that will be presented is very simple, but served to consolida
 **1-** Clone repository.
 
 **2-** Install dependecies.
-```js
-yarn
+```sh
+> yarn
 // or
-yarn install
+> yarn install
 // and
-yarn start
+> yarn start
 ```
 
 ### Demo
